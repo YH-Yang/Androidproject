@@ -44,5 +44,8 @@ dependencies {
     implementation 'org.litepal.android:java:3.0.0'
     implementation 'com.github.arcadefire:nice-spinner:1.4.3'
     implementation 'com.ldoublem.loadingview:loadingviewlib:1.0'
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation "com.android.support:design:28.0.0"
+    implementation 'com.carson_ho:Super_EditText:1.0.0'
     implementation files('libs/poishadow-all.jar')
 }

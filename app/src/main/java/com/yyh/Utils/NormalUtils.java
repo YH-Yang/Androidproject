@@ -44,8 +44,15 @@ public class NormalUtils {
                 final String type = split[0];
 
 
-                if ("primary".equalsIgnoreCase(type)) {
-                    return Environment.getExternalStorageDirectory() + "/" + split[1];
+//                if ("primary".equalsIgnoreCase(type)) {
+//                    return Environment.getExternalStorageDirectory() + "/" + split[1];
+//                }
+                if ("primary".equals(type)) {
+                    String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/").concat(split[1]);
+                    return path;
+                } else {
+                    String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/").concat(split[1]);
+                    return path;
                 }
             }
             // DownloadsProvider

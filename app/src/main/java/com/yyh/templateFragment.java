@@ -126,6 +126,8 @@ public class templateFragment extends Fragment implements View.OnClickListener{
                 Uri uri = data.getData();
                 //将模板复制到模板文件夹里
                 //默认添加完模板后，开始编辑该模板（可能不行）
+                Log.d("this way", uri.toString());
+                Log.d("this way", NormalUtils.getPath(getContext(), uri));
                 templateUri = copyTemplate(uri);
                 setTitleList(templateUri);
                 setTemplateList();
@@ -170,8 +172,8 @@ public class templateFragment extends Fragment implements View.OnClickListener{
             String name = NormalUtils.getFileNameWithSuffix(NormalUtils.getPath(getContext(), uri));
             String outputUri = file.getAbsolutePath() + "/" +name;
             //将模板复制到模板文件夹里
-            NormalUtils.copyFile(NormalUtils.getPath(getContext(), uri),
-                    outputUri);
+            Log.d("this way", String.valueOf(NormalUtils.copyFile(NormalUtils.getPath(getContext(), uri),
+                    outputUri)));
             return outputUri;
         }else{
             return null;
@@ -196,7 +198,7 @@ public class templateFragment extends Fragment implements View.OnClickListener{
     private void setTemplateList(){
         File file = new File(Statics.PATH_TEMPLATES);
         File[] files=file.listFiles();
-        if (files == null){Log.e("error","空目录");}
+        if (files == null){Log.e("error","空目录");return;}
         List<String> s = new ArrayList<>();
         for (File file1 : files) {
             s.add(NormalUtils.getFileNameWithSuffix(file1.getAbsolutePath()));

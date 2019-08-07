@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_set"
+        android:title="笔录设置">
+    </item>
+    <item
+        android:id="@+id/navigation_record"
+        android:title="笔录采录">
+    </item>
+    <item
+        android:id="@+id/navigation_proofread"
+        android:title="文稿核对">
+    </item>
+
+    <item
+        android:id="@+id/navigation_search"
+        android:title="笔录查询">
+    </item>
+
+    <item
+        android:id="@+id/navigation_print"
+        android:title="排版打印">
+    </item>
+
+    <item
+        android:id="@+id/navigation_manage"
+        android:title="版面管理">
+    </item>
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:title="系统设置">
+    </item>
+
+
+
+</menu>
